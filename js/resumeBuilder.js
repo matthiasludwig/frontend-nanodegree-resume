@@ -1,3 +1,96 @@
+// Resume Objects
+
+var work = {
+    "jobs" : [
+        {
+            "employer" : "",
+            "title" : "",
+            "location" : "",
+            "dates" : "",
+            "description" : ""
+        },
+        {
+        "employer" : "",
+            "title" : "",
+            "location" : "",
+            "dates" : "",
+            "description" : ""
+        }
+    ]
+}
+
+var projects = {
+    "projects" : [
+        {
+            "title" : "",
+            "dates" : "",
+            "description" : "",
+            "images" : ["images/projectA.jpg"]
+        },
+        {
+            "title" : "",
+            "dates" : "",
+            "description" : "",
+            "images" : ["images/projectB.jpg"]
+        }
+    ]
+}
+
+var bio = {
+    "name" : "Matthias Ludwig",
+    "role" : "Business Geek",
+    "welcome-message" : "Welcome to my resume!",
+    "contacts" : {
+        "mobile" : "(415) 483-6433",
+        "email" : "matthiasludwig@me.com",
+        "github" : "matthiasludwig",
+        "twitter" : "matthiasludw",
+        "location" : "San Francisco, CA"
+    },
+    "skills" : ["Business", "Programming", "Front-End Web Development"]
+}
+
+var education = {
+    "schools" : [
+        {
+            "name" : "Hult International Business School",
+            "location" : "San Francisco, CA",
+            "degree" : "Master's Degree",
+            "majors" : "International Business",
+            "dates" : 2015,
+            "url" : "www.hult.edu"
+        },
+        {
+            "name" : "Saarland University",
+            "location" : "Saarbruecken, Germany",
+            "degree" : "Bachelor's Degree",
+            "majors" : "Business and Law",
+            "dates" : 2014,
+            "url" : "www.uni-saarland.de"
+        }
+    ],
+    "onlineCourses" : [
+        {
+            "title" : "FEND Nanodegree",
+            "school" : "Udacity",
+            "dates" : 2016,
+            "url" : "www.udacity.com"
+        },
+        {
+            "title" : "Introduction to Computer Science",
+            "school" : "Harvard on edX",
+            "dates" : 2016,
+            "url" : "www.edx.org"
+        }
+    ]
+}
+
+
+/*
+#
+# Excercises of L1 of the Udacity JavaScript Basics course
+#
+
 $("#main").append("Matthias Ludwig");
 
 var awesomeThoughts = "I am Matthias and I am AWESOME";
@@ -65,3 +158,4 @@ var edu = {
         }
     ]
 }
+*/
