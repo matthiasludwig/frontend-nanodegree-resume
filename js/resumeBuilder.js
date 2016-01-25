@@ -1,20 +1,31 @@
+//Header formatting
+
+var name = "Matthias Ludwig";
+var role = "Business Geek";
+
+var formattedName = HTMLheaderName.replace("%data%", name);
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
 // Resume Objects
 
 var work = {
     "jobs" : [
         {
-            "employer" : "",
-            "title" : "",
-            "location" : "",
-            "dates" : "",
-            "description" : ""
+            "employer" : "HoloBuilder Inc.",
+            "title" : "Intern Business Development",
+            "location" : "San Francisco, CA",
+            "dates" : "09/2015 to present",
+            "description" : "Testtext for the job at HoloBuilder Inc."
         },
         {
-        "employer" : "",
-            "title" : "",
-            "location" : "",
-            "dates" : "",
-            "description" : ""
+        "employer" : "Consiglia e.V.",
+            "title" : "Head of IT",
+            "location" : "Saarbruecken, Germany",
+            "dates" : "04/2011 until 10/2014",
+            "description" : "Testtext for job at Consiglia e.V."
         }
     ]
 }
@@ -22,15 +33,15 @@ var work = {
 var projects = {
     "projects" : [
         {
-            "title" : "",
-            "dates" : "",
-            "description" : "",
+            "title" : "Project A",
+            "dates" : "2013 until 2014",
+            "description" : "I did Project A",
             "images" : ["images/projectA.jpg"]
         },
         {
-            "title" : "",
-            "dates" : "",
-            "description" : "",
+            "title" : "Project B",
+            "dates" : "2014 until 2015",
+            "description" : "I did Project B afterwards.",
             "images" : ["images/projectB.jpg"]
         }
     ]
@@ -83,6 +94,70 @@ var education = {
             "url" : "www.edx.org"
         }
     ]
+}
+
+/* Lesson 2 - Control Flow */
+
+function displayWork()
+{
+
+if (bio.skills.length > 0)
+{
+    $('#header').append(HTMLskillsStart);
+
+    for (skill in bio.skills)
+    {
+        var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+        $("#skills").append(formattedSkill);
+    }
+}
+
+for (job in work.jobs)
+{
+    $('#workExperience').append(HTMLworkStart);
+
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedJobTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedJobDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+    var formattedEmployerTitle = formattedEmployer + formattedJobTitle + formattedJobLocation + formattedJobDates + formattedJobDescription;
+    $('.work-entry:last').append(formattedEmployerTitle);
+}
+}
+
+displayWork();
+
+$('#main').append(internationalizeButton);
+
+function inName(oldname) {
+
+    var finalName = oldName;
+
+    var names = oldName.split(" ");
+    names[1] = names[1].toUpperCase();
+    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+    finalName = names.join(" ");
+    
+    return finalName;
+}
+
+projects.display = displayProjects()
+{
+    for (project in projects.projects)
+{
+    $('#projects').append(HTMLprojectStart);
+
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedJobTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedJobLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedJobDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedJobDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+    var formattedEmployerTitle = formattedEmployer + formattedJobTitle + formattedJobLocation + formattedJobDates + formattedJobDescription;
+    $('.work-entry:last').append(formattedEmployerTitle);
+}
 }
 
 
