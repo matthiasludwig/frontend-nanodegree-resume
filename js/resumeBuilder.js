@@ -166,6 +166,14 @@ projects.display = displayProjects()
 # Excercises of L1 of the Udacity JavaScript Basics course
 #
 
+
+
+
+/*
+#
+# Excercises from the online class "JavaScript Basics"
+#
+
 $("#main").append("Matthias Ludwig");
 
 var awesomeThoughts = "I am Matthias and I am AWESOME";
@@ -232,5 +240,6 @@ var edu = {
             "graduation" : 2014
         }
     ]
+<<<<<<< Updated upstream
 }
 */
