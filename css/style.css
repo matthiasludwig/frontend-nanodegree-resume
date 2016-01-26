@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: darkblue;
   line-height: 48px;
   display: inline;
 }
@@ -44,6 +44,7 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  padding-top: 10px;
 }
 
 h4 {
@@ -54,7 +55,7 @@ h4 {
 }
 
 h2,
-h3,
+/*h3, To get OnlineCourse formatted correctly*/
 h4,
 h5 {
   padding:10px 5%;
@@ -88,7 +89,7 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top : 10px;
   display: block;
 }
 
@@ -99,17 +100,22 @@ a {
   line-height: 28px;
 }
 
+#linkSchool {
+    margin-top : 0;
+    margin-bottom: 10px;
+}
+
 #skills-h3 {
-  color: #f5ae23;
+  color: darkblue;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #282c34;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: darkblue;
 }
 
 .white-text {
